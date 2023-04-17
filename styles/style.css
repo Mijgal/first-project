@@ -16,6 +16,9 @@
   align-items: center;
   display: flex;
 }
+.header__link {
+  color: #2f80ed;
+}
 
 .logo {
   top: 30px;
@@ -31,12 +34,14 @@
 
 .header__title {
   width: 730px;
-  left: 64px;
+  margin-left: 64px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
   display: flex;
   line-height: 96px;
   font-size: 102px;
-  font-style: 600;
-  position: absolute;
+  font-weight: 600;
 }
 
 .header__subtitle {
@@ -50,7 +55,7 @@
   font-style: normal;
 }
 
-.main-illustration {
+.header__main-illustration {
   width: 765px;
   height: 608px;
   bottom: 0;
@@ -77,6 +82,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
+  margin-bottom: 0;
 }
 .two-columns {
   width: 80%;
@@ -97,26 +103,25 @@
 .two-columns__main-text {
   width: 80%;
   min-width: 784px;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0;
 }
 .two-columns__paragraph {
 line-height: 34px;
 font-size: 24px;
 align-items: baseline;
+margin-bottom: 30px;
 }
 .two-columns__span-accent {
-  line-height: 34px;
-  font-size: 24px;
-  font-style: 600;
-}
-span {
-  font-weight: bold;
+  font-weight: 600;
 }
 .digits {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
+  margin-top: 100px;
   display: block;
 }
 .section-title{
@@ -125,9 +130,10 @@ span {
   margin-right: auto;
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 0;
   line-height: 1.15;
   font-size: 60px;
-  font-style: 600;
+  font-weight: 600;
   
 }
 .section-subtitle{
@@ -136,9 +142,10 @@ span {
   margin-right: auto;
   text-align: center;
   margin-bottom: 0;
+  margin-top: 0;
   line-height: 34px;
   font-size: 24px;
-  font-style: normal;
+  font-weight: normal;
 }
 .table {
   display:flex;
@@ -155,7 +162,7 @@ span {
   list-style:none;
   line-height: 1.15;
   font-size: 24px;
-  font-style: 600;
+  font-weight: 600;
   margin-bottom: 20px;
   margin-left: 0;
   margin-top: 0;
@@ -165,7 +172,8 @@ span {
   font-size: 18px;
   font-weight: normal;
   text-align:left;
-  margin-top: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 .table__cell {
   display: flex;
@@ -177,16 +185,17 @@ span {
 
 .feynman {
   background-color: #f2f2f2;
-  height: 890px;
+  min-height: 890px;
   position: relative;
   z-index: 1;
 }
 .feynman__title {
-  width: 648px;
+  max-width: 648px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 70px;
-  margin-top: 100px;
+  margin-top: 0;
+  padding-top: 100px;
   text-align: center;
   line-height: 1.15;
   font-size: 120px;
@@ -198,15 +207,15 @@ span {
   text-align: center;
   line-height: 51px;
   font-size: 36px;
-  font-style: normal;
+  font-weight: normal;
 }
-.feynman__feynman__link {
+.feynman__link {
   position: absolute;
   top: 50%;
   right: 48px;
   line-height: 51px;
   font-size: 36px;
-  font-style: normal;
+  font-weight: normal;
   text-decoration: none;
 }
 .feynman__main-illustration {
@@ -224,8 +233,8 @@ span {
   margin-right: auto;
   overflow: hidden;
   color: white;
-  background-color: #000000;
-  z-index: -3;
+  background-color: #1f1f1f;
+  z-index: 1;
   display: block;
 }
 
@@ -253,7 +262,7 @@ span {
   margin-bottom: 0;
 }
 .table__cell_theme_dark {
-  z-index: -1;
+  z-index: 1;
   width: 200px;
   margin-top: 80px;
   margin-left: 0;
@@ -264,11 +273,12 @@ span {
 }
 
 .footer {
-  background-color: #000000;
+  background-color: #1f1f1f;
   color: white;
   min-height: 350px;
   padding-top: 60px;
   padding-bottom: 40px;
+  box-sizing:border-box;
 }
 .footer__columns {
   margin-top: 0;
@@ -278,7 +288,6 @@ span {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  list-style-type: none;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -299,11 +308,13 @@ span {
   padding-bottom: 18px;
   line-height: 25px;
   font-size: 18px;
-  font-style: normal;
-  position: absolute;
+  font-weight: normal;
+  display: flexbox;
 }
 .footer__column_content_copyright {
-flex-basis: 711px;
+  flex-basis: 711px;
+  flex-direction: column-reverse;
+  display: flex;
 }
 .footer__column-heading {
   margin-bottom: 20px;
@@ -317,16 +328,17 @@ flex-basis: 711px;
   margin-bottom: 16px;
   line-height: 30px;
   font-size: 18px;
-  font-style: normal;
+  font-weight: normal;
   margin-top: 0;
   display: flex;
+  flex-direction: column;
   width: 16px;
   height: 16px;
   position: relative;
   color: white;
+  text-decoration: none;
 }
 .footer__column_content_social {
-  margin-left:auto;
   margin-right:0;
   display: block;
 }
@@ -341,4 +353,5 @@ display: block;
   height: 16px;
   position: relative;
   color: white;
+  text-decoration: none;
 }
