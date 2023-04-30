@@ -3,12 +3,9 @@
     flex-direction: column;
     text-align: center;
     margin-right: 100px;
-    align-items: center;
-    width: 200px;
+    width: 240px;
+    align-content: center;
   }
 .cards__item:nth-child(3n) {
-    margin-right: 0;
-  }
-.cards__item:last-child {
     margin-right: 0;
   }
